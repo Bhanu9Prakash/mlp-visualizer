@@ -1,6 +1,9 @@
 # Dynamic MLP Visualization
 
 This project provides an interactive web-based tool for visualizing Multi-Layer Perceptron (MLP) neural network architectures.
+https://bhanu9prakash.github.io/mlp-visualizer/
+![image](https://github.com/user-attachments/assets/0f48546b-cafa-4636-864f-431fa3aaa1ac)
+
 
 ## Features
 
