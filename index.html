@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic MLP Visualization</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Dynamic MLP Visualization</h1>
+    <div id="controls">
+        <input type="number" id="inputNeurons" placeholder="Input neurons" min="1" value="3">
+        <input type="text" id="hiddenLayers" placeholder="Hidden layers (comma-separated)" value="6,7,4">
+        <input type="number" id="outputNeurons" placeholder="Output neurons" min="1" value="1">
+        <input type="color" id="inputColor" value="#EC6602">
+        <input type="color" id="hiddenColor" value="#009999">
+        <input type="color" id="outputColor" value="#7A2982">
+        <button onclick="generateMLP()">
+            <svg class="icon"><use xlink:href="#icon-generate"></use></svg>
+            Generate MLP
+        </button>
+    </div>
+    <div id="downloadOptions">
+        <button onclick="downloadSVG()">
+            <svg class="icon"><use xlink:href="#icon-download"></use></svg>
+            Download SVG
+        </button>
+        <button onclick="downloadPNG()">
+            <svg class="icon"><use xlink:href="#icon-download"></use></svg>
+            Download PNG
+        </button>
+        <button onclick="downloadJPG()">
+            <svg class="icon"><use xlink:href="#icon-download"></use></svg>
+            Download JPG
+        </button>
+    </div>
+    <div>
+        <h3>Input Labels</h3>
+        <div id="inputLabels"></div>
+    </div>
+    <div>
+        <h3>Output Labels</h3>
+        <div id="outputLabels"></div>
+    </div>
+    <svg id="mlp-svg"></svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="icon-generate" viewBox="0 0 24 24">
+            <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+        </symbol>
+        <symbol id="icon-download" viewBox="0 0 24 24">
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+        </symbol>
+    </svg>
+
+    <script src="script.js"></script>
+</body>
+</html>
